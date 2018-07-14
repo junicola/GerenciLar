@@ -11,11 +11,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="501.0" prefWidth="646.0" style="-fx-background-color: #606060;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.FormLoginController">
+<AnchorPane id="AnchorPane" prefHeight="501.0" prefWidth="646.0" style="-fx-background-color: #606060;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.FormLoginController">
    <children>
       <ImageView fx:id="imgHeader" fitHeight="282.0" fitWidth="354.0" layoutX="169.0" layoutY="-95.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@gerencilar_logo%20(4).png" />
+            <Image url="@Image/gerencilar_logo%20(4).png" />
          </image>
       </ImageView>
       <Label layoutX="242.0" layoutY="119.0" text="Login" textFill="#fcf9f9">
@@ -23,7 +23,7 @@
             <Font name="Century Gothic" size="26.0" />
          </font>
       </Label>
-      <Label layoutX="242.0" layoutY="167.0" text="Email" textFill="WHITE">
+      <Label layoutX="242.0" layoutY="167.0" text="E-mail" textFill="WHITE">
          <font>
             <Font name="Century Gothic" size="16.0" />
          </font>
@@ -41,7 +41,7 @@
          </font>
       </TextField>
       <PasswordField fx:id="txtSenha" layoutX="232.0" layoutY="266.0" onKeyPressed="#LoginEnter" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #606060; -fx-border-color: #606060; -fx-text-inner-color: white;" />
-      <Button fx:id="btnLogin" layoutX="241.0" layoutY="341.0" mnemonicParsing="false" onMouseClicked="#FazerLogin" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #29b6f6; -fx-background-radius: 5;" text="Entrar" textAlignment="CENTER" textFill="WHITE">
+      <Button fx:id="btnLogin" layoutX="241.0" layoutY="341.0" mnemonicParsing="false" onMouseClicked="#Login" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #29b6f6; -fx-background-radius: 5;" text="Entrar" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font>
@@ -57,7 +57,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Label>
-      <Label layoutX="404.0" layoutY="419.0" style="-fx-underline: true;" text="Sobre" textFill="#42a5f5">
+      <Label layoutX="404.0" layoutY="419.0" onMouseClicked="#AboutPage" style="-fx-underline: true;" text="Sobre" textFill="#42a5f5">
          <font>
             <Font name="Century Gothic" size="13.0" />
          </font>
