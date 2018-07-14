@@ -8,16 +8,10 @@ package Controller;
 import DAO.DbAcessUser;
 import Model.User;
 import View.GerenciLar;
-import java.io.IOException;
 import java.net.URL;
-import java.sql.SQLException;
 import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
@@ -25,7 +19,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
-import javafx.stage.Stage;
 
 public class FormLoginController implements Initializable {
     
@@ -45,7 +38,7 @@ public class FormLoginController implements Initializable {
         // TODO
     }    
       
-    public void Login() throws IOException, SQLException{
+    public void Login(){
         String senha = txtSenha.getText();
         String login = txtEmail.getText();
         boolean resposta = service.autenticaLogin(login, senha);
@@ -54,10 +47,7 @@ public class FormLoginController implements Initializable {
         if(resposta == true){
             txtEmail.setText("");
             txtSenha.setText("");
-            service.setLogado(login);
-//            GerenciLar gr = new GerenciLar();
-//            gr.changeScreen("Main"); 
-            change(login);
+            GerenciLar.changeScreen("Main");
         }
         
         else {
@@ -70,35 +60,14 @@ public class FormLoginController implements Initializable {
             txtEmail.requestFocus();
         }
     }
-   
-    public void AboutPage() throws IOException{
-        GerenciLar gr = new GerenciLar();
-        gr.about();
+    public void AboutPage(){
+        GerenciLar.about();
     }
             
-    public void LoginEnter(KeyEvent e) throws IOException, SQLException {
+    public void LoginEnter(KeyEvent e) {
             if(e.getCode() == KeyCode.ENTER) {
                 Login();
             }
     }
     
-    public void change(String login) throws SQLException{
-        FXMLLoader Loader = new FXMLLoader();
-        Loader.setLocation(getClass().getResource("/View/FormMain.fxml"));
-        
-        try {
-            Loader.load();
-        }
-        catch (IOException ex){
-            System.out.println("erro ao trocar ctrl" + ex);
-        }
-        FormMainController frm = Loader.getController();
-        frm.setUserName(login);
-        
-        Parent p = Loader.getRoot();
-        Stage stage = new Stage();
-        stage.setScene(new Scene(p));
-        stage.showAndWait();
-    }
 }
-

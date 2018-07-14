@@ -2,7 +2,6 @@ package View;
 
 
 import Model.User;
-import java.io.IOException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -35,6 +34,42 @@ public class GerenciLar extends Application {
         Parent fxmlLogin = FXMLLoader.load(getClass().getResource("FormLogin.fxml"));
         loginScene = new Scene(fxmlLogin);
         
+        Parent fxmlMain = FXMLLoader.load(getClass().getResource("FormMain.fxml"));
+        mainScene = new Scene(fxmlMain);
+        
+        Parent fxmlAbout = FXMLLoader.load(getClass().getResource("FormAbout.fxml"));
+        aboutScene = new Scene(fxmlAbout);
+
+        Parent fxmlUser = FXMLLoader.load(getClass().getResource("FormUser.fxml"));
+        userScene = new Scene(fxmlUser);
+        
+        Parent fxmlBill = FXMLLoader.load(getClass().getResource("FormBill.fxml"));
+        billScene = new Scene(fxmlBill);
+        
+        Parent fxmlActivity = FXMLLoader.load(getClass().getResource("FormActivity.fxml"));
+        activityScene = new Scene(fxmlActivity);
+        
+        Parent fxmlList = FXMLLoader.load(getClass().getResource("FormList.fxml"));
+        listScene = new Scene(fxmlList);
+        
+        Parent fxmlAddUser = FXMLLoader.load(getClass().getResource("FormAddUser.fxml"));
+        addUserScene = new Scene(fxmlAddUser);
+        
+        Parent fxmlAddBill = FXMLLoader.load(getClass().getResource("FormAddBill.fxml"));
+        addBillScene = new Scene(fxmlAddBill);        
+        
+        Parent fxmlAddActivity = FXMLLoader.load(getClass().getResource("FormAddActivity.fxml"));
+        addActivityScene = new Scene(fxmlAddActivity);
+        
+        Parent fxmlAddList = FXMLLoader.load(getClass().getResource("FormAddList.fxml"));
+        addListScene = new Scene(fxmlAddList);
+        
+        Parent fxmlPayBill = FXMLLoader.load(getClass().getResource("FormPayBill.fxml"));
+        payBillScene = new Scene(fxmlPayBill);
+        
+        Parent fxmlHistoryScene = FXMLLoader.load(getClass().getResource("FormHistorico.fxml"));
+        historyScene = new Scene(fxmlHistoryScene);
+        
         stage.setScene(loginScene);
         stage.setTitle("GerenciLar");
         stage.getIcons().add(
@@ -44,14 +79,12 @@ public class GerenciLar extends Application {
         stage.show();        
     }
     
-    public void changeScreen(String scr) throws IOException{
+    public static void changeScreen(String scr){
         switch(scr){
             case "Login":
                 myStage.setScene(loginScene);
                 break;
             case "Main":
-                Parent fxmlMain = FXMLLoader.load(getClass().getResource("FormMain.fxml"));
-                mainScene = new Scene(fxmlMain);
                 myStage.setScene(mainScene);
                 break;
             case "About":
@@ -93,51 +126,51 @@ public class GerenciLar extends Application {
         myStage.close();
     }
     
-    public void logoff() throws IOException{
+    public static void logoff(){
         changeScreen("Login");
     }
     
-    public void about() throws IOException{
+    public static void about(){
         changeScreen("About");
     }
     
-    public void user() throws IOException{
+    public static void user(){
         changeScreen("User");
     }
     
-    public void bill() throws IOException{
+    public static void bill(){
         changeScreen("Bill");
     }
     
-    public void activity() throws IOException{
+    public static void activity(){
         changeScreen("Activity");
     }
     
-    public void list() throws IOException{
+    public static void list(){
         changeScreen("List");
     }
     
-    public void addUser() throws IOException{
+    public static void addUser(){
         changeScreen("AddUser");
     }
     
-    public void addBill() throws IOException{
+    public static void addBill(){
         changeScreen("AddBill");
     }
     
-    public void addActivity() throws IOException{
+    public static void addActivity(){
         changeScreen("AddActivity");
     }
     
-    public void addList() throws IOException{
+    public static void addList(){
         changeScreen("AddList");
     }
     
-    public void payBill() throws IOException{
+    public static void payBill(){
         changeScreen("PayBill");
     }
     
-    public void historico() throws IOException{
+    public static void historico(){
         changeScreen("History");
     }
     

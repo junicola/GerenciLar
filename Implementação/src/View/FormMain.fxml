@@ -88,7 +88,7 @@
             </Label>
          </children>
       </Pane>
-      <Label layoutX="379.0" layoutY="204.0" text="Bem Vindo, " textFill="WHITE">
+      <Label layoutX="421.0" layoutY="204.0" text="Bem Vindo!" textFill="WHITE">
          <font>
             <Font name="Century Gothic" size="25.0" />
          </font>
@@ -98,7 +98,7 @@
             <Image url="@Image/gerencilar_logo%20(4).png" />
          </image>
       </ImageView>
-      <Label fx:id="txtUser" layoutX="520.0" layoutY="204.0" onMouseClicked="#setUserName" prefHeight="32.0" prefWidth="174.0">
+      <Label fx:id="txtUser" layoutX="569.0" layoutY="204.0" prefHeight="32.0" prefWidth="174.0" textFill="WHITE">
          <font>
             <Font name="Century Gothic" size="25.0" />
          </font>

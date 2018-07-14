@@ -134,6 +134,11 @@
                   <Font name="Century Gothic" size="18.0" />
                </font>
             </CheckBox>
+            <Button fx:id="btnAtualizar" layoutX="551.0" layoutY="406.0" mnemonicParsing="false" onMouseClicked="#AtualizaUserAndBill" prefHeight="31.0" prefWidth="94.0" style="-fx-background-color: #29b6f6; -fx-background-radius: 5;" text="Atualizar" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
    </children>

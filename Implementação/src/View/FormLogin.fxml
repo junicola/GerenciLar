@@ -23,7 +23,7 @@
             <Font name="Century Gothic" size="26.0" />
          </font>
       </Label>
-      <Label layoutX="242.0" layoutY="167.0" text="E-mail" textFill="WHITE">
+      <Label layoutX="242.0" layoutY="167.0" text="Usuário" textFill="WHITE">
          <font>
             <Font name="Century Gothic" size="16.0" />
          </font>

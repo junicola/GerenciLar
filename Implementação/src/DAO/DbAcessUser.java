@@ -12,8 +12,6 @@ import java.util.List;
 
 public class DbAcessUser {
     
-    public String logado;
-    
     // dados para acesso ao banco
     final String USUARIO = "root";
     final String SENHA = "root123";
@@ -30,7 +28,6 @@ public class DbAcessUser {
 	final String APAGAR = "DELETE FROM User WHERE user_id = ?";
         final String BUSCAR_NOME  = "SELECT user_name FROM User";
         final String VALIDA_LOGIN = "SELECT user_email, user_password FROM User WHERE user_email=? and user_password=?";   
-        final String BUSCAR_USER = "SELECT user_id, user_name, user_email, user_phone, user_rg, user_password, user_type_id FROM User WHERE user_email=?";
         
         public void salvar(User usuario) {
             try {
@@ -164,38 +161,6 @@ public class DbAcessUser {
             
             return autenticado;
         }
-
-    public String getLogado() {
-        return logado;
-    }
-
-    public void setLogado(String logado) {
-        this.logado = logado;
-    }
-    
-    public User userLogado(String nm) throws SQLException{
-        User user = new User();
-        this.logado = nm;
-        try{
-            Connection con = conexao();
-            PreparedStatement buscarUser = con.prepareStatement(BUSCAR_USER);
-            buscarUser.setString(1, logado);
-            ResultSet resultadoBusca = buscarUser.executeQuery();
-            while(resultadoBusca.next()){
-                user = extraiUser(resultadoBusca);
-            }
-               
-            buscarUser.close();
-            con.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-            System.err.println("ERROR BUSCANDO USUARIO LOGADO.");
-            System.exit(0);
-	} 
-        return user;
-    }
-             
-        
         
         private Connection conexao() {
             try {
