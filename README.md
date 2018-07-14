@@ -1,5 +1,5 @@
 # Projeto ODI
 
-## Amauri Martins, Júlia Nicola
+## Membros do grupo: Amauri Martins, Júlia Nicola
 
-Projeto feito para a disciplina de Oficina de Integração, com o intuito de criar um sistema para gerenciamento doméstico.
+Projeto feito para apresentação na disciplina de Oficina de Integração I, com o intuito de criar um sistema Desktop para gerenciamento de contas, atividades domésticas, listas e usuários residentes em moradias compartilhadas. 
